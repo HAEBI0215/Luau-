@@ -3,11 +3,11 @@ local RollService = require(script.Parent.Modules.RollService)
 local RollEvent = ReplicatedStorage:WaitForChild("RollEvent")
 
 RollEvent.OnServerEvent:Connect(function(player)
-	print("서버가 요청 받음:", player.Name)
-
 	local result = RollService.RollAura()
 
-	print(result.Name)
-	print(result.Rarity)
-	print(result.Weight)
+    -- if result.Rarity == "Mystic" then
+    --     RollEvent:FireAllClients(player, result)
+    -- end
+
+	RollEvent:FireClient(player, result)
 end)
