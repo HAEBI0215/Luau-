@@ -1,0 +1,67 @@
+{
+  "name": "game",
+  "className": "DataModel",
+  "children": [
+    {
+      "name": "StarterGui",
+      "className": "StarterGui",
+      "pluginManaged": true,
+      "children": [
+        {
+          "name": "RollClient",
+          "className": "LocalScript",
+          "pluginManaged": true,
+          "filePaths": [
+            "e:/Project/Luau-/RollClient.local.luau"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "ServerScriptService",
+      "className": "ServerScriptService",
+      "pluginManaged": true,
+      "children": [
+        {
+          "name": "Modules",
+          "className": "Folder",
+          "pluginManaged": true,
+          "children": [
+            {
+              "name": "PlayerDataManater",
+              "className": "ModuleScript",
+              "pluginManaged": true,
+              "filePaths": [
+                "e:/Project/Luau-/PlayerDataManater.luau"
+              ]
+            },
+            {
+              "name": "RollService",
+              "className": "ModuleScript",
+              "pluginManaged": true,
+              "filePaths": [
+                "e:/Project/Luau-/RollService.luau"
+              ]
+            },
+            {
+              "name": "AuraData",
+              "className": "ModuleScript",
+              "pluginManaged": true,
+              "filePaths": [
+                "e:/Project/Luau-/AuraData.luau"
+              ]
+            }
+          ]
+        },
+        {
+          "name": "ServerMain",
+          "className": "Script",
+          "pluginManaged": true,
+          "filePaths": [
+            "e:/Project/Luau-/ServerMain.legacy.luau"
+          ]
+        }
+      ]
+    }
+  ]
+}
