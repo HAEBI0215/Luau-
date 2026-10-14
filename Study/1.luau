@@ -42,9 +42,12 @@
 --#region 5
 local inputLimit = nil
 local limit = inputLimit or 4
+-- limit = 4
 local bonus = 0 and 2
+-- bonus = 2
 
 local count = limit
+--count = 4
 local total = 0
 
 for i = 1, limit do
