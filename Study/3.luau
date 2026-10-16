@@ -39,10 +39,68 @@ local stock = {
 
 local function GetStock(values, name)
     local quantity = values[name]
-    print(quantity)
+    local isAvailable = false
+
+    if values[name] == nil then
+        quantity = 0
+        isAvailable = false
+    else
+        isAvailable = true
+    end
+
+    return quantity, isAvailable
 end
 
-GetStock(stock, "byenix")
-GetStock(stock, "miraiCar")
-GetStock(stock, "water")
---#endregion
+local function AddStock(values, name, amout)
+    local quantity = values[name]
+
+    if values[name] == nil then
+        if quantity == nil then
+            quantity = 0
+            quantity = quantity + amout
+        end
+    else
+        quantity = quantity + amout
+    end
+
+    values[name] = quantity
+    return quantity
+end
+
+local function SummarizeStock(values)
+    local totalSum = 0
+    local count = 0
+    for name, quantity in pairs(values) do
+        totalSum = totalSum + quantity
+        count = count + 1
+    end
+
+    return totalSum, count
+end
+
+print("추가")
+local quantity = AddStock(stock, "byenix", 2)
+print(quantity)
+local quantity = AddStock(stock, "miraiCar", 3)
+print(quantity)
+local quantity = AddStock(stock, "roblox", 4)
+print(quantity)
+local quantity = AddStock(stock, "byenix", 1)
+print(quantity)
+local quantity = AddStock(stock, "water", 2)
+
+local quantity, isAvailable = GetStock(stock, "byenix")
+print(quantity, isAvailable)
+local quantity, isAvailable = GetStock(stock, "miraiCar")
+print(quantity, isAvailable)
+local quantity, isAvailable = GetStock(stock, "roblox")
+print(quantity, isAvailable)
+local quantity, isAvailable = GetStock(stock, "water")
+print(quantity, isAvailable)
+
+print("총 개수")
+local totalSum, count = SummarizeStock(stock)
+print(totalSum, count)
+-- #endregion
+
+
