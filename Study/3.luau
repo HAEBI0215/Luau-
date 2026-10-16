@@ -30,77 +30,80 @@
 --#endregion
 
 --region 2
-local stock = {
-    byenix = 5,
-    samsu = 3,
-    miraiCar = 0,
-    mvidia = 0
-    }
+-- local stock = {
+--     byenix = 5,
+--     samsu = 3,
+--     miraiCar = 0,
+--     mvidia = 0
+--     }
 
-local function GetStock(values, name)
-    local quantity = values[name]
-    local isAvailable = false
+-- local function GetStock(values, name)
+--     local quantity = values[name]
+--     local isAvailable = false
 
-    if values[name] == nil then
-        quantity = 0
-        isAvailable = false
-    else
-        isAvailable = true
-    end
+--     if values[name] == nil then
+--         quantity = 0
+--         isAvailable = false
+--     else
+--         isAvailable = true
+--     end
 
-    return quantity, isAvailable
-end
+--     return quantity, isAvailable
+-- end
 
-local function AddStock(values, name, amout)
-    local quantity = values[name]
+-- local function AddStock(values, name, amout)
+--     local quantity = values[name]
 
-    if values[name] == nil then
-        if quantity == nil then
-            quantity = 0
-            quantity = quantity + amout
-        end
-    else
-        quantity = quantity + amout
-    end
+--     if values[name] == nil then
+--         if quantity == nil then
+--             quantity = 0
+--             quantity = quantity + amout
+--         end
+--     else
+--         quantity = quantity + amout
+--     end
 
-    values[name] = quantity
-    return quantity
-end
+--     values[name] = quantity
+--     return quantity
+-- end
 
-local function SummarizeStock(values)
-    local totalSum = 0
-    local count = 0
-    for name, quantity in pairs(values) do
-        totalSum = totalSum + quantity
-        count = count + 1
-    end
+-- local function SummarizeStock(values)
+--     local totalSum = 0
+--     local count = 0
+--     for name, quantity in pairs(values) do
+--         totalSum = totalSum + quantity
+--         count = count + 1
+--     end
 
-    return totalSum, count
-end
+--     return totalSum, count
+-- end
 
-print("추가")
-local quantity = AddStock(stock, "byenix", 2)
-print(quantity)
-local quantity = AddStock(stock, "miraiCar", 3)
-print(quantity)
-local quantity = AddStock(stock, "roblox", 4)
-print(quantity)
-local quantity = AddStock(stock, "byenix", 1)
-print(quantity)
-local quantity = AddStock(stock, "water", 2)
+-- print("추가")
+-- local quantity = AddStock(stock, "byenix", 2)
+-- print(quantity)
+-- local quantity = AddStock(stock, "miraiCar", 3)
+-- print(quantity)
+-- local quantity = AddStock(stock, "roblox", 4)
+-- print(quantity)
+-- local quantity = AddStock(stock, "byenix", 1)
+-- print(quantity)
+-- local quantity = AddStock(stock, "mvidia", 2)
+-- print(quantity)
+-- local quantity = AddStock(stock, "pear", 2)
+-- print(quantity)
 
-local quantity, isAvailable = GetStock(stock, "byenix")
-print(quantity, isAvailable)
-local quantity, isAvailable = GetStock(stock, "miraiCar")
-print(quantity, isAvailable)
-local quantity, isAvailable = GetStock(stock, "roblox")
-print(quantity, isAvailable)
-local quantity, isAvailable = GetStock(stock, "water")
-print(quantity, isAvailable)
+-- local quantity, isAvailable = GetStock(stock, "byenix")
+-- print(quantity, isAvailable)
+-- local quantity, isAvailable = GetStock(stock, "miraiCar")
+-- print(quantity, isAvailable)
+-- local quantity, isAvailable = GetStock(stock, "roblox")
+-- print(quantity, isAvailable)
+-- local quantity, isAvailable = GetStock(stock, "pear")
+-- print(quantity, isAvailable)
 
-print("총 개수")
-local totalSum, count = SummarizeStock(stock)
-print(totalSum, count)
+-- print("총합, 총 개수")
+-- local totalSum, count = SummarizeStock(stock)
+-- print(totalSum, count)
 -- #endregion
 
 
