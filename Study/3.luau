@@ -109,3 +109,5 @@
 --region 3
 
 --endregion
+
+--commit
