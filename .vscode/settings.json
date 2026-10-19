@@ -1,4 +1,7 @@
 {
     "luau-lsp.studioPlugin.enabled": true,
-    "luau-lsp.fflags.enableNewSolver": true
+    "luau-lsp.fflags.enableNewSolver": true,
+    "code-runner.executorMapByGlob": {
+        "*.luau": "C:\\Users\\winds\\Downloads\\luau-windows\\luau.exe"
+    }
 }

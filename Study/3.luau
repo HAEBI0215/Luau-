@@ -107,7 +107,20 @@
 -- #endregion
 
 --region 3
+local function GetSortedCopy(values)
+    local copiedT = table.clone(values)
 
+    table.sort(copiedT)
+
+    return copiedT
+end
+
+local copiedT = GetSortedCopy({40, 10, 30, 20})
+for i = 1, #copiedT do
+    print(copiedT[i])
+end
+local copiedT = GetSortedCopy({5, 5, 0})
+for i = 1, #copiedT do
+    print(copiedT[i])
+end
 --endregion
-
---commit
