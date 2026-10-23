@@ -33,24 +33,24 @@
 --#endregion
 
 --#region 2
-local function CreateAccumulator(start)
-    if start == nil then
-        start = 0
-    end
+-- local function CreateAccumulator(start)
+--     if start == nil then
+--         start = 0
+--     end
 
-    local function increase(value)
-        start = start + value
-        return start
-    end
-    return increase
-end
+--     local function increase(value)
+--         start = start + value
+--         return start
+--     end
+--     return increase
+-- end
 
-local addA = CreateAccumulator(10)
-local addB = CreateAccumulator()
+-- local addA = CreateAccumulator(10)
+-- local addB = CreateAccumulator()
 
-print(addA(3))
-print(addA(5))
-print(addB(2))
-print(addA(-4))
-print(addB(8))
+-- print(addA(3))
+-- print(addA(5))
+-- print(addB(2))
+-- print(addA(-4))
+-- print(addB(8))
 --#endregion
